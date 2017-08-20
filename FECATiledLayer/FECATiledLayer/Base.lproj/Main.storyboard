@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="DLF-Z7-oE3">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Tjm-zm-Buw">
+            <objects>
+                <navigationController id="DLF-Z7-oE3" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eYG-ET-bo6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ZP6-2e-Plt" kind="relationship" relationship="rootViewController" id="YH6-aQ-FSw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aVm-tT-D55" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1208" y="110"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="vEA-Rc-TaC">
+            <objects>
+                <viewController id="ZP6-2e-Plt" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ejt-vp-iO2"/>
+                        <viewControllerLayoutGuide type="bottom" id="n5I-mh-TMP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xTJ-Cc-k28">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wMZ-fX-KKd">
+                                <rect key="frame" x="50" y="114" width="275" height="50"/>
+                                <color key="backgroundColor" red="0.44497567449999997" green="0.9445981323" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="G6R-uE-0tA"/>
+                                </constraints>
+                                <state key="normal" title="切图">
+                                    <color key="titleColor" red="1" green="0.13043897339999999" blue="0.1893021922" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="cutImageAction:" destination="ZP6-2e-Plt" eventType="touchUpInside" id="bpN-RI-jf0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lNc-nb-DR8">
+                                <rect key="frame" x="50" y="214" width="275" height="50"/>
+                                <color key="backgroundColor" red="0.44497567449999997" green="0.9445981323" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="YJF-pW-Tbt"/>
+                                </constraints>
+                                <state key="normal" title="展示">
+                                    <color key="titleColor" red="1" green="0.13043897339999999" blue="0.1893021922" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="zwN-Uc-OkX" kind="show" id="Fmg-b8-KXj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wMZ-fX-KKd" firstAttribute="leading" secondItem="xTJ-Cc-k28" secondAttribute="leading" constant="50" id="1aF-aB-xGB"/>
+                            <constraint firstItem="lNc-nb-DR8" firstAttribute="top" secondItem="wMZ-fX-KKd" secondAttribute="bottom" constant="50" id="Gf5-J9-CFq"/>
+                            <constraint firstAttribute="trailing" secondItem="wMZ-fX-KKd" secondAttribute="trailing" constant="50" id="KwV-E4-RDr"/>
+                            <constraint firstItem="wMZ-fX-KKd" firstAttribute="top" secondItem="Ejt-vp-iO2" secondAttribute="bottom" constant="50" id="SPG-JL-3Hy"/>
+                            <constraint firstAttribute="trailing" secondItem="lNc-nb-DR8" secondAttribute="trailing" constant="50" id="XpX-cL-b5T"/>
+                            <constraint firstItem="lNc-nb-DR8" firstAttribute="leading" secondItem="xTJ-Cc-k28" secondAttribute="leading" constant="50" id="YK6-tf-qu4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="weh-g9-3fk"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZHr-Xz-wxz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-490" y="109"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="pBb-j4-Onf">
+            <objects>
+                <viewController id="zwN-Uc-OkX" customClass="DetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NpI-rz-xUb"/>
+                        <viewControllerLayoutGuide type="bottom" id="ozB-F5-Inl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cvW-YU-H1q">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rve-fR-nlo">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Rve-fR-nlo" firstAttribute="leading" secondItem="cvW-YU-H1q" secondAttribute="leading" id="GmL-oR-dHe"/>
+                            <constraint firstItem="ozB-F5-Inl" firstAttribute="top" secondItem="Rve-fR-nlo" secondAttribute="bottom" id="WwW-Tg-Lwb"/>
+                            <constraint firstItem="Rve-fR-nlo" firstAttribute="top" secondItem="NpI-rz-xUb" secondAttribute="bottom" id="u7y-tr-wg1"/>
+                            <constraint firstAttribute="trailing" secondItem="Rve-fR-nlo" secondAttribute="trailing" id="vLh-MB-wNN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="scrollView" destination="Rve-fR-nlo" id="brZ-rZ-ich"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9iL-2I-j3l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="214" y="109"/>
+        </scene>
+    </scenes>
+</document>
